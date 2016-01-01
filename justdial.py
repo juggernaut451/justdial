@@ -42,17 +42,6 @@ def justdial(keyword,state):
 
 
   print "\n\n\nPage List Prepared. Writing to file page_list.csv\n"
-  """
-  with open(dir_path+'/file_list.csv', 'wb') as csvfile:
-      spamwriter = csv.writer(csvfile, delimiter=',',
-                            quotechar='"', quoting=csv.QUOTE_MINIMAL)
-      for data in pageLink:
-      print data
-        
-      spamwriter.writerow([data])
-        
-  """    
-
   print "Writing to file page_list.csv completed.\n"
   print "Analysing  pages..\n"
   print "Extracting entries"
@@ -87,13 +76,11 @@ def justdial(keyword,state):
       for a in range(1,i+1):
             if int(a)<=int(i):
               new_link = path+"page-"+str(a)
-              spamwriter1.writerow([new_link])   
-              #new_link+=extractLink(x,'//*[@class="jpag"]/a/@href')
+              spamwriter1.writerow([new_link]) 
    
    
   for x in pageLink:
     new_link=pageLink+extractLink(x,'//*[@class="jpag"]/a/@href')
-    #print new_link
     new_link = uniq(new_link) 
    
    
