@@ -2,5 +2,5 @@
 ##Its helps to scrape justdial data and push it into csv format with each states
 
 ```python
-example.py
+python example.py
 ```
